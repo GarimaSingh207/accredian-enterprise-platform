@@ -13,13 +13,13 @@ const iconMap: Record<string, LucideIcon> = {
 
 export function AccredianEdgeSection() {
   return (
-    <SectionWrapper id="edge" className="bg-white border-b border-neutral-100">
+    <SectionWrapper id="edge" className="bg-white dark:bg-[#0B1220] border-b border-neutral-100 dark:border-[rgba(255,255,255,0.08)] transition-colors duration-300">
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
-          The <span className="text-accent-500">Accredian Edge</span>
+        <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-[#F8FAFC]">
+          The <span className="text-primary-600 dark:text-primary-400">Accredian Edge</span>
         </h2>
-        <p className="text-base md:text-lg text-primary-600 font-medium">
+        <p className="text-base md:text-lg text-primary-600 dark:text-primary-400 font-medium">
           Key Aspects of Our Strategic Training
         </p>
       </div>
@@ -31,13 +31,13 @@ export function AccredianEdgeSection() {
           return (
             <Card
               key={feature.id}
-              className="flex flex-col space-y-4 p-6 md:p-8 bg-white border-neutral-200 hover:border-primary-300 group"
+              className="flex flex-col space-y-4 p-6 md:p-8 group"
             >
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#DBEAFE] to-[#EFF6FF] text-primary-600 flex items-center justify-center shrink-0 shadow-[0_4px_12px_rgba(37,99,235,0.15)] group-hover:rotate-6 group-hover:scale-[1.08] transition-all duration-300">
-                <IconComponent className="w-7 h-7" />
+              <div className="icon-container-48 shrink-0">
+                <IconComponent className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-neutral-900">{feature.title}</h3>
-              <p className="text-sm text-neutral-600 leading-relaxed flex-1">
+              <h3 className="text-lg font-bold text-neutral-900 dark:text-[#F8FAFC]">{feature.title}</h3>
+              <p className="text-sm text-neutral-600 dark:text-[#CBD5E1] leading-relaxed flex-1">
                 {feature.description}
               </p>
             </Card>

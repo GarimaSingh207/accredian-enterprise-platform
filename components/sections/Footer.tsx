@@ -52,8 +52,8 @@ export function Footer() {
 
   return (
     <footer id="footer" className="bg-[#08111F] text-neutral-300 pt-16 pb-12 relative overflow-hidden">
-      {/* Top Gradient Divider Border */}
-      <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-600 via-accent-500 to-primary-600 pointer-events-none" />
+      {/* Top Divider Border */}
+      <div className="absolute top-0 left-0 right-0 h-0.5 bg-primary-600 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 space-y-12 relative z-10">
         {/* Top Header Row */}

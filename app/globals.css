@@ -16,29 +16,24 @@
   --color-primary-800: #1E40AF;
   --color-primary-900: #1E3A8A;
 
-  /* Accent Orange Scale */
+  /* Subtle Warm Accent Scale */
   --color-accent-500: #F59E0B;
   --color-accent-600: #D97706;
 
-  /* Custom Accent Color System */
-  --color-primary-blue: #2563EB;   /* Primary CTAs, Active Nav, Hero highlights */
-  --color-primary-indigo: #4F46E5; /* Secondary Gradients, glows, accents */
-  --color-primary-purple: #8B5CF6; /* Technology, title highlights */
-  --color-primary-cyan: #06B6D4;   /* Analytics, Data icons */
-  --color-primary-orange: #F59E0B; /* Business outcomes, achievements */
-  --color-primary-green: #22C55E;  /* Success indicators, metrics */
+  /* Custom Clean Color Palette */
+  --color-primary-blue: #2563EB;
 
   /* Neutral scale */
-  --color-neutral-50: #F9FAFB;
-  --color-neutral-100: #F3F4F6;
-  --color-neutral-200: #E5E7EB;
-  --color-neutral-300: #D1D5DB;
-  --color-neutral-400: #9CA3AF;
-  --color-neutral-500: #6B7280;
-  --color-neutral-600: #4B5563;
-  --color-neutral-700: #374151;
-  --color-neutral-800: #1F2937;
-  --color-neutral-900: #111827;
+  --color-neutral-50: #F8FAFC;
+  --color-neutral-100: #F1F5F9;
+  --color-neutral-200: #E2E8F0;
+  --color-neutral-300: #CBD5E1;
+  --color-neutral-400: #94A3B8;
+  --color-neutral-500: #64748B;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1E293B;
+  --color-neutral-900: #0F172A;
 
   /* Section Colors */
   --color-section-alt: #F8FBFF;
@@ -53,14 +48,16 @@
 
 :root {
   --bg-page: #FFFFFF;
-  --bg-card: rgba(255, 255, 255, 0.95);
-  --border-card: rgba(0, 0, 0, 0.08);
-  --text-main: #111827;
-  --text-muted: #6B7280;
+  --bg-section-alt: #F8FBFF;
+  --bg-card: #FFFFFF;
+  --border-card: #E2E8F0;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
 }
 
 .dark {
   --bg-page: #0B1220;
+  --bg-section-alt: #0F172A;
   --bg-card: #111827;
   --border-card: rgba(255, 255, 255, 0.08);
   --text-main: #F8FAFC;
@@ -71,15 +68,15 @@
   --color-neutral-100: #1F2937;
   --color-neutral-200: rgba(255, 255, 255, 0.08);
   --color-neutral-300: rgba(255, 255, 255, 0.15);
-  --color-neutral-400: #9CA3AF;
+  --color-neutral-400: #94A3B8;
   --color-neutral-500: #CBD5E1;
-  --color-neutral-600: #94A3B8;
+  --color-neutral-600: #CBD5E1;
   --color-neutral-700: #E2E8F0;
   --color-neutral-800: #1F2937;
   --color-neutral-900: #F8FAFC;
 
-  --color-section-alt: #0B1220;
-  --color-section-dark: #0E1726;
+  --color-section-alt: #0F172A;
+  --color-section-dark: #0B1220;
 }
 
 @keyframes hero-float {
@@ -103,9 +100,9 @@ body {
 .btn-shine-effect {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #2563EB, #4F46E5);
+  background: #2563EB;
   box-shadow: 0 8px 24px rgba(37,99,235,0.25);
-  transition: transform 220ms ease, box-shadow 220ms ease;
+  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
 }
 
 .btn-shine-effect::after {
@@ -118,14 +115,15 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.35),
     transparent
   );
   transform: skewX(-20deg);
 }
 
 .btn-shine-effect:hover {
-  transform: scale(1.03) translateY(-2px);
+  background: #1D4ED8;
+  transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(37,99,235,0.35);
 }
 
@@ -137,7 +135,7 @@ body {
   100% { left: 150%; }
 }
 
-/* Secondary Button Animated Border */
+/* Secondary Button Glass Outline */
 .btn-secondary-glass {
   position: relative;
   overflow: hidden;
@@ -148,23 +146,23 @@ body {
 }
 
 .btn-secondary-glass:hover {
-  transform: scale(1.03) translateY(-2px);
+  transform: translateY(-2px);
+  background: rgba(37, 99, 235, 0.05);
 }
 
 /* Premium Card Styles */
 .premium-card {
   background: var(--bg-card);
-  backdrop-filter: blur(12px);
   border: 1px solid var(--border-card);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
   border-radius: 18px;
   transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease, background-color 300ms ease;
 }
 
 .premium-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
-  border-color: rgba(37, 99, 235, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-color: rgba(37, 99, 235, 0.3);
 }
 
 /* Standardized Icon Containers (48x48) */
@@ -175,12 +173,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  transition: transform 250ms ease;
+  background: #EFF6FF;
+  color: #2563EB;
+  transition: transform 250ms ease, background-color 300ms ease, color 300ms ease;
+}
+
+.dark .icon-container-48 {
+  background: #1F2937;
+  color: #60A5FA;
 }
 
 .icon-container-48:hover {
-  transform: rotate(5deg) scale(1.08);
+  transform: scale(1.06);
 }
 
 /* Client Logo Hover Transitions */
@@ -193,7 +197,7 @@ body {
 .logo-filter-transition:hover {
   filter: grayscale(0%);
   opacity: 1;
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 *:focus-visible {

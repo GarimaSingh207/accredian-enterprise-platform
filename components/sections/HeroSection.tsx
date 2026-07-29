@@ -32,15 +32,15 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative pt-6 pb-16 md:pt-12 md:pb-24 overflow-hidden bg-white"
+      className="relative pt-6 pb-16 md:pt-12 md:pb-24 overflow-hidden bg-white dark:bg-[#0B1220] transition-colors duration-300"
     >
       {/* Premium Specific Radial Gradients */}
       <div 
         className="absolute inset-0 pointer-events-none transition-transform duration-100 ease-out"
         style={{
           backgroundImage: `
-            radial-gradient(circle at calc(80% + ${mousePos.x}px) calc(20% + ${mousePos.y}px), rgba(37,99,235,0.18), transparent 45%),
-            radial-gradient(circle at calc(20% + ${mousePos.x}px) calc(80% + ${mousePos.y}px), rgba(14,165,233,0.10), transparent 35%)
+            radial-gradient(circle at calc(80% + ${mousePos.x}px) calc(20% + ${mousePos.y}px), rgba(37,99,235,0.15), transparent 45%),
+            radial-gradient(circle at calc(20% + ${mousePos.x}px) calc(80% + ${mousePos.y}px), rgba(14,165,233,0.08), transparent 35%)
           `
         }}
       />
@@ -63,39 +63,39 @@ export function HeroSection() {
       />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-        <div className="bg-white/80 backdrop-blur-md border border-neutral-200/80 rounded-3xl p-6 md:p-10 lg:p-12 shadow-card hover:shadow-card-hover transition-all duration-300 relative overflow-hidden">
+        <div className="bg-white/80 dark:bg-[#111827]/90 backdrop-blur-md border border-neutral-200/80 dark:border-[rgba(255,255,255,0.08)] rounded-3xl p-6 md:p-10 lg:p-12 shadow-card hover:shadow-card-hover transition-all duration-300 relative overflow-hidden">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
             {/* Left Column Content */}
             <div className="lg:col-span-7 space-y-6 text-left">
 
-              {/* Display Headline with gradient text highlights */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-900 leading-[1.1]">
-                Next-Gen <span className="bg-gradient-to-r from-primary-600 to-indigo-600 bg-clip-text text-transparent hover:opacity-90 transition-opacity duration-300">Expertise</span> <br />
-                For Your <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent hover:opacity-90 transition-opacity duration-300">Enterprise</span>
+              {/* Display Headline */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-900 dark:text-[#F8FAFC] leading-[1.1]">
+                Next-Gen <span className="text-primary-600">Expertise</span> <br />
+                For Your <span className="text-primary-700 dark:text-primary-400">Enterprise</span>
               </h1>
 
-              <p className="text-base sm:text-lg md:text-xl text-neutral-700 font-normal leading-relaxed max-w-xl">
+              <p className="text-base sm:text-lg md:text-xl text-neutral-700 dark:text-[#CBD5E1] font-normal leading-relaxed max-w-xl">
                 Cultivate high-performance teams through expert learning, bespoke corporate training programs, and application-driven capabilities.
               </p>
 
               {/* Key Highlights Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                <div className="flex items-center gap-2.5 p-2 rounded-lg bg-white border border-neutral-100 shadow-xs">
-                  <CheckCircle2 className="w-4 h-4 text-success-500 shrink-0" />
-                  <span className="text-xs md:text-sm font-semibold text-neutral-800">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-lg bg-white dark:bg-[#1F2937] border border-neutral-200/80 dark:border-[rgba(255,255,255,0.08)] shadow-xs">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                  <span className="text-xs md:text-sm font-semibold text-neutral-800 dark:text-[#F8FAFC]">
                     Tailored Solutions
                   </span>
                 </div>
-                <div className="flex items-center gap-2.5 p-2 rounded-lg bg-white border border-neutral-100 shadow-xs">
-                  <CheckCircle2 className="w-4 h-4 text-success-500 shrink-0" />
-                  <span className="text-xs md:text-sm font-semibold text-neutral-800">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-lg bg-white dark:bg-[#1F2937] border border-neutral-200/80 dark:border-[rgba(255,255,255,0.08)] shadow-xs">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                  <span className="text-xs md:text-sm font-semibold text-neutral-800 dark:text-[#F8FAFC]">
                     Industry Insights
                   </span>
                 </div>
-                <div className="flex items-center gap-2.5 p-2 rounded-lg bg-white border border-neutral-100 shadow-xs">
-                  <CheckCircle2 className="w-4 h-4 text-success-500 shrink-0" />
-                  <span className="text-xs md:text-sm font-semibold text-neutral-800">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-lg bg-white dark:bg-[#1F2937] border border-neutral-200/80 dark:border-[rgba(255,255,255,0.08)] shadow-xs">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                  <span className="text-xs md:text-sm font-semibold text-neutral-800 dark:text-[#F8FAFC]">
                     Expert Guidance
                   </span>
                 </div>
