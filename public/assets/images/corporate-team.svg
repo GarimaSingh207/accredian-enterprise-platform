@@ -1,57 +1,100 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="100%" height="100%">
   <defs>
-    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1565C0" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#2196F3" stop-opacity="0.8"/>
+    <!-- Gradients for styling -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
     </linearGradient>
-    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#10B981" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.8"/>
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
     </linearGradient>
-  </defs>
-  
-  <!-- Outer Glow Ring -->
-  <circle cx="200" cy="200" r="180" fill="none" stroke="url(#glow)" stroke-width="2" stroke-dasharray="8 8" opacity="0.4" />
-  <circle cx="200" cy="200" r="150" fill="none" stroke="url(#accentGlow)" stroke-width="1" stroke-dasharray="4 4" opacity="0.6" />
-
-  <!-- Background Decorative Shapes -->
-  <path d="M 120 120 L 280 120 L 200 280 Z" fill="url(#glow)" opacity="0.05" />
-  
-  <!-- Corporate Dashboard Mockup Frame -->
-  <rect x="70" y="80" width="260" height="180" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="3" shadow="0 20px 25px -5px rgba(0,0,0,0.1)" />
-  <rect x="70" y="80" width="260" height="30" rx="12" fill="#f8fafc" />
-  <!-- Browser dots -->
-  <circle cx="85" cy="95" r="4" fill="#ef4444" />
-  <circle cx="95" cy="95" r="4" fill="#eab308" />
-  <circle cx="105" cy="95" r="4" fill="#22c55e" />
-
-  <!-- Dashboard internal cards -->
-  <rect x="85" y="125" width="70" height="50" rx="6" fill="#eff6ff" />
-  <rect x="165" y="125" width="150" height="50" rx="6" fill="#f1f5f9" />
-  
-  <!-- Charts & Stats lines inside mock -->
-  <path d="M 90 160 L 110 140 L 130 150 L 150 135" fill="none" stroke="#1565C0" stroke-width="3" stroke-linecap="round" />
-  <rect x="175" y="135" width="100" height="8" rx="4" fill="#cbd5e1" />
-  <rect x="175" y="150" width="60" height="8" rx="4" fill="#cbd5e1" />
-
-  <!-- Team Upskilling visual element overlay -->
-  <g transform="translate(180, 210)">
-    <rect x="-100" y="0" width="240" height="110" rx="16" fill="#ffffff" stroke="#1565C0" stroke-width="2" />
-    <!-- Avatars in visual -->
-    <circle cx="-60" cy="55" r="22" fill="#2196F3" />
-    <circle cx="-10" cy="55" r="22" fill="#10B981" />
-    <circle cx="40" cy="55" r="22" fill="#f59e0b" />
-    <circle cx="90" cy="55" r="22" fill="#8b5cf6" />
+    <linearGradient id="accentOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+    <linearGradient id="accentEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
     
-    <text x="-68" y="60" fill="#ffffff" font-family="Arial" font-weight="bold" font-size="14">PM</text>
-    <text x="-20" y="60" fill="#ffffff" font-family="Arial" font-weight="bold" font-size="14">AI</text>
-    <text x="30" y="60" fill="#ffffff" font-family="Arial" font-weight="bold" font-size="14">DA</text>
-    <text x="78" y="60" fill="#ffffff" font-family="Arial" font-weight="bold" font-size="14">OPS</text>
-  </g>
+    <!-- Mask for smooth fading edges -->
+    <radialGradient id="fadeMask" cx="50%" cy="50%" r="50%">
+      <stop offset="80%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="smoothEdge">
+      <rect x="0" y="0" width="500" height="400" fill="url(#fadeMask)"/>
+    </mask>
+  </defs>
 
-  <!-- Floating Professional Badge overlay -->
-  <g transform="translate(40, 280)" filter="drop-shadow(0px 8px 16px rgba(21,101,192,0.15))">
-    <rect x="0" y="0" width="130" height="50" rx="25" fill="#1565C0" />
-    <text x="65" y="30" fill="#ffffff" font-family="Arial" font-weight="bold" font-size="12" text-anchor="middle">Accredited</text>
+  <!-- Soft Edge Faded Background Group -->
+  <g mask="url(#smoothEdge)">
+    <!-- Abstract background rings -->
+    <circle cx="250" cy="200" r="160" fill="none" stroke="url(#accentCyan)" stroke-width="1.5" stroke-dasharray="10 5" opacity="0.3"/>
+    <circle cx="250" cy="200" r="130" fill="none" stroke="url(#purpleGrad)" stroke-width="1" stroke-dasharray="5 5" opacity="0.4"/>
+    
+    <!-- Corner Dotted Pattern -->
+    <pattern id="dots" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#6366F1" opacity="0.15" />
+    </pattern>
+    <rect x="300" y="40" width="120" height="120" fill="url(#dots)" />
+
+    <!-- Professional Workspace Backdrop -->
+    <!-- Large Meeting Screen -->
+    <rect x="100" y="70" width="300" height="180" rx="16" fill="#1E293B" opacity="0.9" stroke="#334155" stroke-width="2"/>
+    <rect x="100" y="70" width="300" height="30" rx="16" fill="#0F172A"/>
+    <!-- Browser window Controls -->
+    <circle cx="120" cy="85" r="4" fill="#EF4444" />
+    <circle cx="130" cy="85" r="4" fill="#F59E0B" />
+    <circle cx="140" cy="85" r="4" fill="#10B981" />
+    <text x="250" y="90" fill="#94A3B8" font-family="sans-serif" font-size="10" text-anchor="middle" font-weight="600">Enterprise Upskilling Dashboard</text>
+
+    <!-- Dashboard Content Elements -->
+    <rect x="120" y="115" width="120" height="60" rx="8" fill="#334155" opacity="0.5"/>
+    <rect x="250" y="115" width="130" height="60" rx="8" fill="#334155" opacity="0.5"/>
+    
+    <!-- Chart lines in dashboard -->
+    <path d="M 130 160 L 155 135 L 180 148 L 210 125 M 210 125 L 225 130" fill="none" stroke="url(#accentCyan)" stroke-width="3" stroke-linecap="round"/>
+    <rect x="265" y="130" width="100" height="6" rx="3" fill="#64748B"/>
+    <rect x="265" y="145" width="70" height="6" rx="3" fill="#64748B"/>
+    <circle cx="265" cy="160" r="4" fill="#10B981"/>
+    <circle cx="280" cy="160" r="4" fill="#6366F1"/>
+    <circle cx="295" cy="160" r="4" fill="#38BDF8"/>
+
+    <!-- Collaborative Enterprise Team (Realistic Fluent Characters) -->
+    <!-- Table -->
+    <ellipse cx="250" cy="270" rx="180" ry="40" fill="#334155" opacity="0.3"/>
+    <ellipse cx="250" cy="265" rx="170" ry="35" fill="url(#primaryGrad)" opacity="0.8"/>
+
+    <!-- Left Character: Woman collaborating (Product/L&D) -->
+    <g transform="translate(140, 200)">
+      <!-- Avatar/Outfit -->
+      <path d="M 10 90 C 10 50, 60 50, 60 90 Z" fill="#475569" />
+      <path d="M 15 90 L 55 90 L 35 60 Z" fill="#6366F1" />
+      <!-- Head -->
+      <circle cx="35" cy="40" r="18" fill="#FDBA74" />
+      <!-- Hair -->
+      <path d="M 17 40 C 17 20, 53 20, 53 40 C 53 25, 17 25, 17 40" fill="#1E293B" />
+      <!-- Laptop -->
+      <path d="M 45 75 L 75 75 L 80 90 L 40 90 Z" fill="#E2E8F0" />
+      <path d="M 75 75 L 72 60 L 45 60 Z" fill="#0EA5E9" opacity="0.8" />
+    </g>
+
+    <!-- Right Character: Man collaborating (Business Executive) -->
+    <g transform="translate(260, 190)">
+      <!-- Outfit -->
+      <path d="M 20 100 C 20 55, 70 55, 70 100 Z" fill="#0F172A" />
+      <path d="M 30 100 L 60 100 L 45 65 Z" fill="#10B981" />
+      <path d="M 40 68 L 50 68 L 45 78 Z" fill="#FFFFFF" /> <!-- Tie/Collar -->
+      <!-- Head -->
+      <circle cx="45" cy="45" r="18" fill="#FED7AA" />
+      <!-- Hair -->
+      <path d="M 27 40 C 27 25, 63 25, 63 40 Z" fill="#78350F" />
+    </g>
   </g>
 </svg>

@@ -72,16 +72,16 @@ export function HeroSection() {
             <div className="lg:col-span-7 space-y-6 text-left">
               {/* Badge Bar */}
               <div className="flex flex-wrap items-center gap-2.5">
-                <Badge variant="primary" className="gap-1.5 px-3.5 py-1.5 text-xs font-semibold shadow-xs">
-                  <ShieldCheck className="w-4 h-4 text-primary-600" />
+                <Badge variant="primary" className="gap-1.5 px-3.5 py-1.5 text-xs font-semibold shadow-xs border-indigo-200 text-indigo-700 bg-indigo-50/50">
+                  <ShieldCheck className="w-4 h-4 text-indigo-600" />
                   Enterprise Learning & Capability Partner
                 </Badge>
               </div>
 
-              {/* Display Headline */}
+              {/* Display Headline with gradient text highlights */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-900 leading-[1.1]">
-                Next-Gen <span className="text-accent-500">Expertise</span> <br />
-                For Your <span className="text-primary-600">Enterprise</span>
+                Next-Gen <span className="bg-gradient-to-r from-primary-600 to-indigo-600 bg-clip-text text-transparent hover:opacity-90 transition-opacity duration-300">Expertise</span> <br />
+                For Your <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent hover:opacity-90 transition-opacity duration-300">Enterprise</span>
               </h1>
 
               <p className="text-base sm:text-lg md:text-xl text-neutral-700 font-normal leading-relaxed max-w-xl">
@@ -90,19 +90,19 @@ export function HeroSection() {
 
               {/* Key Highlights Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                <div className="flex items-center gap-2.5 p-2 rounded-lg bg-neutral-50/60 border border-neutral-100">
+                <div className="flex items-center gap-2.5 p-2 rounded-lg bg-white border border-neutral-100 shadow-xs">
                   <CheckCircle2 className="w-4 h-4 text-success-500 shrink-0" />
                   <span className="text-xs md:text-sm font-semibold text-neutral-800">
                     Tailored Solutions
                   </span>
                 </div>
-                <div className="flex items-center gap-2.5 p-2 rounded-lg bg-neutral-50/60 border border-neutral-100">
+                <div className="flex items-center gap-2.5 p-2 rounded-lg bg-white border border-neutral-100 shadow-xs">
                   <CheckCircle2 className="w-4 h-4 text-success-500 shrink-0" />
                   <span className="text-xs md:text-sm font-semibold text-neutral-800">
                     Industry Insights
                   </span>
                 </div>
-                <div className="flex items-center gap-2.5 p-2 rounded-lg bg-neutral-50/60 border border-neutral-100">
+                <div className="flex items-center gap-2.5 p-2 rounded-lg bg-white border border-neutral-100 shadow-xs">
                   <CheckCircle2 className="w-4 h-4 text-success-500 shrink-0" />
                   <span className="text-xs md:text-sm font-semibold text-neutral-800">
                     Expert Guidance
