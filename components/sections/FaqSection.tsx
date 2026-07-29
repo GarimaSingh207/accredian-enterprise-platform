@@ -23,10 +23,10 @@ export function FaqSection() {
   const filteredFaqs = faqs.filter((item) => item.category === activeCategory);
 
   return (
-    <SectionWrapper id="faqs" className="bg-section-alt border-b border-neutral-100 dark:border-[rgba(255,255,255,0.08)] transition-colors duration-300">
+    <SectionWrapper id="faqs" className="bg-white dark:bg-slate-950 border-b border-slate-200/80 dark:border-slate-800 transition-colors duration-300">
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-3 mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-[#F8FAFC]">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-50">
           Frequently Asked <span className="text-primary-600 dark:text-primary-400">Questions</span>
         </h2>
         <p className="text-base md:text-lg text-primary-600 dark:text-primary-400 font-medium">
@@ -49,11 +49,11 @@ export function FaqSection() {
       </div>
 
       {/* Bottom CTA */}
-      <div className="text-center bg-white dark:bg-[#111827] border border-neutral-200/80 dark:border-[rgba(255,255,255,0.08)] p-8 rounded-2xl max-w-xl mx-auto shadow-xs">
-        <h3 className="text-xl font-bold text-neutral-900 dark:text-[#F8FAFC] mb-2">
+      <div className="text-center bg-slate-50 dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 p-8 rounded-2xl max-w-xl mx-auto shadow-xs">
+        <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">
           Have more questions for your enterprise?
         </h3>
-        <p className="text-sm text-neutral-600 dark:text-[#CBD5E1] mb-6">
+        <p className="text-sm text-slate-600 dark:text-slate-400 mb-6">
           Our L&D advisors are ready to craft a custom learning strategy for your organization.
         </p>
         <Button variant="primary" size="md" onClick={openModal}>

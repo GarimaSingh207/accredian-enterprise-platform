@@ -32,21 +32,21 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative pt-6 pb-16 md:pt-12 md:pb-24 overflow-hidden bg-white dark:bg-[#0B1220] transition-colors duration-300"
+      className="relative pt-6 pb-16 md:pt-12 md:pb-24 overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-300"
     >
-      {/* Premium Specific Radial Gradients */}
+      {/* Subtle Specific Radial Gradients */}
       <div 
         className="absolute inset-0 pointer-events-none transition-transform duration-100 ease-out"
         style={{
           backgroundImage: `
-            radial-gradient(circle at calc(80% + ${mousePos.x}px) calc(20% + ${mousePos.y}px), rgba(37,99,235,0.15), transparent 45%),
-            radial-gradient(circle at calc(20% + ${mousePos.x}px) calc(80% + ${mousePos.y}px), rgba(14,165,233,0.08), transparent 35%)
+            radial-gradient(circle at calc(80% + ${mousePos.x}px) calc(20% + ${mousePos.y}px), rgba(37,99,235,0.10), transparent 45%),
+            radial-gradient(circle at calc(20% + ${mousePos.x}px) calc(80% + ${mousePos.y}px), rgba(14,165,233,0.05), transparent 35%)
           `
         }}
       />
 
       {/* Dotted Grid Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(#1565C0_1.5px,transparent_1.5px)] [background-size:24px_24px] opacity-5 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(#2563EB_1.2px,transparent_1.2px)] [background-size:24px_24px] opacity-5 dark:opacity-10 pointer-events-none" />
 
       {/* Slow Floating Decorative Circles */}
       <div 
@@ -54,48 +54,44 @@ export function HeroSection() {
         style={{ transform: `translate(${mousePos.x * 0.5}px, ${mousePos.y * 0.5}px)` }}
       />
       <div 
-        className="absolute bottom-24 left-1/3 w-[80px] h-[80px] rounded-full bg-accent-500/5 blur-xs pointer-events-none animate-float-medium"
+        className="absolute bottom-24 left-1/3 w-[80px] h-[80px] rounded-full bg-blue-500/5 blur-xs pointer-events-none animate-float-medium"
         style={{ transform: `translate(${mousePos.x * 0.8}px, ${mousePos.y * 0.8}px)` }}
-      />
-      <div 
-        className="absolute top-1/3 right-1/4 w-[50px] h-[50px] rounded-full bg-primary-600/5 pointer-events-none animate-float-fast"
-        style={{ transform: `translate(${mousePos.x}px, ${mousePos.y}px)` }}
       />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-        <div className="bg-white/80 dark:bg-[#111827]/90 backdrop-blur-md border border-neutral-200/80 dark:border-[rgba(255,255,255,0.08)] rounded-3xl p-6 md:p-10 lg:p-12 shadow-card hover:shadow-card-hover transition-all duration-300 relative overflow-hidden">
+        <div className="bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/90 dark:border-slate-800 rounded-3xl p-6 md:p-10 lg:p-12 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
             {/* Left Column Content */}
             <div className="lg:col-span-7 space-y-6 text-left">
 
               {/* Display Headline */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-900 dark:text-[#F8FAFC] leading-[1.1]">
-                Next-Gen <span className="text-primary-600">Expertise</span> <br />
-                For Your <span className="text-primary-700 dark:text-primary-400">Enterprise</span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-slate-50 leading-[1.1]">
+                Next-Gen <span className="text-primary-600 dark:text-primary-400">Expertise</span> <br />
+                For Your <span className="text-blue-700 dark:text-blue-400">Enterprise</span>
               </h1>
 
-              <p className="text-base sm:text-lg md:text-xl text-neutral-700 dark:text-[#CBD5E1] font-normal leading-relaxed max-w-xl">
+              <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 font-normal leading-relaxed max-w-xl">
                 Cultivate high-performance teams through expert learning, bespoke corporate training programs, and application-driven capabilities.
               </p>
 
               {/* Key Highlights Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                <div className="flex items-center gap-2.5 p-2.5 rounded-lg bg-white dark:bg-[#1F2937] border border-neutral-200/80 dark:border-[rgba(255,255,255,0.08)] shadow-xs">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                  <span className="text-xs md:text-sm font-semibold text-neutral-800 dark:text-[#F8FAFC]">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200/90 dark:border-slate-700/80 shadow-xs">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                  <span className="text-xs md:text-sm font-semibold text-slate-800 dark:text-slate-200">
                     Tailored Solutions
                   </span>
                 </div>
-                <div className="flex items-center gap-2.5 p-2.5 rounded-lg bg-white dark:bg-[#1F2937] border border-neutral-200/80 dark:border-[rgba(255,255,255,0.08)] shadow-xs">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                  <span className="text-xs md:text-sm font-semibold text-neutral-800 dark:text-[#F8FAFC]">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200/90 dark:border-slate-700/80 shadow-xs">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                  <span className="text-xs md:text-sm font-semibold text-slate-800 dark:text-slate-200">
                     Industry Insights
                   </span>
                 </div>
-                <div className="flex items-center gap-2.5 p-2.5 rounded-lg bg-white dark:bg-[#1F2937] border border-neutral-200/80 dark:border-[rgba(255,255,255,0.08)] shadow-xs">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                  <span className="text-xs md:text-sm font-semibold text-neutral-800 dark:text-[#F8FAFC]">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200/90 dark:border-slate-700/80 shadow-xs">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                  <span className="text-xs md:text-sm font-semibold text-slate-800 dark:text-slate-200">
                     Expert Guidance
                   </span>
                 </div>

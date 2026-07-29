@@ -4,7 +4,7 @@
   /* Fonts */
   --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-  /* Primary Blue Scale */
+  /* Primary Accredian Blue Palette */
   --color-primary-50: #EFF6FF;
   --color-primary-100: #DBEAFE;
   --color-primary-200: #BFDBFE;
@@ -16,28 +16,9 @@
   --color-primary-800: #1E40AF;
   --color-primary-900: #1E3A8A;
 
-  /* Subtle Warm Accent Scale */
-  --color-accent-500: #F59E0B;
-  --color-accent-600: #D97706;
-
-  /* Custom Clean Color Palette */
-  --color-primary-blue: #2563EB;
-
-  /* Neutral scale */
-  --color-neutral-50: #F8FAFC;
-  --color-neutral-100: #F1F5F9;
-  --color-neutral-200: #E2E8F0;
-  --color-neutral-300: #CBD5E1;
-  --color-neutral-400: #94A3B8;
-  --color-neutral-500: #64748B;
-  --color-neutral-600: #475569;
-  --color-neutral-700: #334155;
-  --color-neutral-800: #1E293B;
-  --color-neutral-900: #0F172A;
-
-  /* Section Colors */
-  --color-section-alt: #F8FBFF;
-  --color-section-dark: #F5F9FF;
+  /* Section Colors for Light Mode */
+  --color-section-alt: #F8FAFC;
+  --color-section-dark: #F1F5F9;
 
   /* Radii */
   --radius-2xl: 18px;
@@ -46,37 +27,14 @@
   --animate-hero-float: hero-float 6s ease-in-out infinite;
 }
 
-:root {
-  --bg-page: #FFFFFF;
-  --bg-section-alt: #F8FBFF;
-  --bg-card: #FFFFFF;
-  --border-card: #E2E8F0;
-  --text-main: #0F172A;
-  --text-muted: #64748B;
+html {
+  scroll-behavior: smooth;
 }
 
-.dark {
-  --bg-page: #0B1220;
-  --bg-section-alt: #0F172A;
-  --bg-card: #111827;
-  --border-card: rgba(255, 255, 255, 0.08);
-  --text-main: #F8FAFC;
-  --text-muted: #CBD5E1;
-
-  /* Dark mode overrides for neutral backgrounds & text */
-  --color-neutral-50: #111827;
-  --color-neutral-100: #1F2937;
-  --color-neutral-200: rgba(255, 255, 255, 0.08);
-  --color-neutral-300: rgba(255, 255, 255, 0.15);
-  --color-neutral-400: #94A3B8;
-  --color-neutral-500: #CBD5E1;
-  --color-neutral-600: #CBD5E1;
-  --color-neutral-700: #E2E8F0;
-  --color-neutral-800: #1F2937;
-  --color-neutral-900: #F8FAFC;
-
-  --color-section-alt: #0F172A;
-  --color-section-dark: #0B1220;
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 300ms ease, color 300ms ease;
 }
 
 @keyframes hero-float {
@@ -84,24 +42,12 @@
   50% { transform: translateY(-6px); }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-sans);
-  color: var(--text-main);
-  background-color: var(--bg-page);
-  overflow-x: hidden;
-  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
-}
-
 /* Primary Button Shine Sweep */
 .btn-shine-effect {
   position: relative;
   overflow: hidden;
   background: #2563EB;
-  box-shadow: 0 8px 24px rgba(37,99,235,0.25);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
   transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
 }
 
@@ -115,7 +61,7 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.3),
     transparent
   );
   transform: skewX(-20deg);
@@ -124,7 +70,7 @@ body {
 .btn-shine-effect:hover {
   background: #1D4ED8;
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(37,99,235,0.35);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
 }
 
 .btn-shine-effect:hover::after {
@@ -135,59 +81,16 @@ body {
   100% { left: 150%; }
 }
 
-/* Secondary Button Glass Outline */
-.btn-secondary-glass {
-  position: relative;
-  overflow: hidden;
-  background: var(--bg-card);
-  border: 1.5px solid #2563EB;
-  color: #2563EB;
-  transition: transform 220ms ease, background-color 300ms ease, border-color 300ms ease;
-}
-
-.btn-secondary-glass:hover {
-  transform: translateY(-2px);
-  background: rgba(37, 99, 235, 0.05);
-}
-
-/* Premium Card Styles */
+/* Premium Card Base */
 .premium-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-card);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-  border-radius: 18px;
   transition: transform 280ms ease, box-shadow 280ms ease, border-color 280ms ease, background-color 300ms ease;
 }
 
 .premium-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-  border-color: rgba(37, 99, 235, 0.3);
 }
 
-/* Standardized Icon Containers (48x48) */
-.icon-container-48 {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #EFF6FF;
-  color: #2563EB;
-  transition: transform 250ms ease, background-color 300ms ease, color 300ms ease;
-}
-
-.dark .icon-container-48 {
-  background: #1F2937;
-  color: #60A5FA;
-}
-
-.icon-container-48:hover {
-  transform: scale(1.06);
-}
-
-/* Client Logo Hover Transitions */
+/* Client Logo Filter */
 .logo-filter-transition {
   filter: grayscale(100%);
   opacity: 0.7;

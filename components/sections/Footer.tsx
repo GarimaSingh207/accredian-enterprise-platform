@@ -51,7 +51,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="footer" className="bg-[#08111F] text-neutral-300 pt-16 pb-12 relative overflow-hidden">
+    <footer id="footer" className="bg-slate-950 text-slate-300 pt-16 pb-12 relative overflow-hidden">
       {/* Top Divider Border */}
       <div className="absolute top-0 left-0 right-0 h-0.5 bg-primary-600 pointer-events-none" />
 
