@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import { Menu, X, ChevronRight } from 'lucide-react';
 import { navLinks } from '@/data/nav-links';
 import { useActiveSection } from '@/hooks/useActiveSection';
