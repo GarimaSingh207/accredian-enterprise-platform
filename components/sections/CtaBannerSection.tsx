@@ -29,10 +29,10 @@ export function CtaBannerSection() {
 
         <div className="shrink-0">
           <Button
-            variant="inverse"
+            variant="secondary"
             size="lg"
             onClick={openModal}
-            className="shadow-lg hover:bg-white text-primary-700"
+            className="shadow-lg bg-white hover:bg-white text-primary-700 border-transparent hover:border-transparent"
           >
             Contact Us
             <ChevronRight className="w-4 h-4 ml-1" />

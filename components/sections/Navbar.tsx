@@ -41,10 +41,10 @@ export function Navbar() {
     <>
       <header
         className={cn(
-          'sticky top-0 z-40 w-full transition-all duration-300',
+          'sticky top-0 z-40 w-full transition-all duration-300 bg-white/75 backdrop-blur-[16px] border-b border-white/25',
           isScrolled
-            ? 'bg-white/85 backdrop-blur-md shadow-xs border-b border-neutral-200/80 py-3'
-            : 'bg-white border-b border-neutral-100 py-4.5'
+            ? 'shadow-[0_4px_20px_rgba(0,0,0,0.08)] py-2.5'
+            : 'shadow-none py-4'
         )}
       >
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between">
@@ -74,16 +74,18 @@ export function Navbar() {
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
                   className={cn(
-                    'px-3 py-2 text-sm font-medium transition-colors relative cursor-pointer',
-                    isActive
-                      ? 'text-primary-600 font-semibold'
-                      : 'text-neutral-700 hover:text-neutral-900 hover:bg-neutral-50 rounded-md'
+                    'px-3 py-2 text-sm font-medium transition-colors relative cursor-pointer group',
+                    isActive ? 'text-primary-600 font-semibold' : 'text-neutral-700 hover:text-neutral-900'
                   )}
                 >
                   {link.label}
-                  {isActive && (
-                    <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-primary-600 rounded-full" />
-                  )}
+                  {/* Underline grows from center on hover, solid on active */}
+                  <span className={cn(
+                    "absolute bottom-0 left-3 right-3 h-0.5 rounded-full transition-all duration-250",
+                    isActive 
+                      ? "bg-primary-600 w-auto" 
+                      : "bg-primary-500 w-0 group-hover:w-auto left-1/2 right-1/2 group-hover:left-3 group-hover:right-3"
+                  )} />
                 </a>
               );
             })}

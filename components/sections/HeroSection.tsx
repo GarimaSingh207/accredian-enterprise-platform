@@ -1,14 +1,15 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   CheckCircle2,
   ChevronRight,
   ShieldCheck,
-  Users,
-  Award,
   Star,
   Lock,
+  Award,
+  TrendingUp,
+  BookOpen,
 } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
@@ -16,21 +17,56 @@ import { useModal } from '@/context/ModalContext';
 
 export function HeroSection() {
   const { openModal } = useModal();
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const { clientX, clientY } = e;
+      const x = (clientX / window.innerWidth - 0.5) * 12; // Maximum 12px translation
+      const y = (clientY / window.innerHeight - 0.5) * 12;
+      setMousePos({ x, y });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
 
   return (
     <section
       id="home"
-      className="relative pt-6 pb-16 md:pt-12 md:pb-24 overflow-hidden bg-gradient-to-b from-white via-primary-50/30 to-white"
+      className="relative pt-6 pb-16 md:pt-12 md:pb-24 overflow-hidden bg-white"
     >
-      {/* Background Decorative Mesh & Grids */}
-      <div className="absolute inset-0 bg-[radial-gradient(#1565C0_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.03] pointer-events-none" />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-200/20 rounded-full blur-3xl pointer-events-none" />
+      {/* Premium Specific Radial Gradients */}
+      <div 
+        className="absolute inset-0 pointer-events-none transition-transform duration-100 ease-out"
+        style={{
+          backgroundImage: `
+            radial-gradient(circle at calc(80% + ${mousePos.x}px) calc(20% + ${mousePos.y}px), rgba(37,99,235,0.18), transparent 45%),
+            radial-gradient(circle at calc(20% + ${mousePos.x}px) calc(80% + ${mousePos.y}px), rgba(14,165,233,0.10), transparent 35%)
+          `
+        }}
+      />
+
+      {/* Dotted Grid Background */}
+      <div className="absolute inset-0 bg-[radial-gradient(#1565C0_1.5px,transparent_1.5px)] [background-size:24px_24px] opacity-5 pointer-events-none" />
+
+      {/* Slow Floating Decorative Circles */}
+      <div 
+        className="absolute top-16 left-12 w-[120px] h-[120px] rounded-full bg-primary-400/5 blur-sm pointer-events-none animate-float-slow"
+        style={{ transform: `translate(${mousePos.x * 0.5}px, ${mousePos.y * 0.5}px)` }}
+      />
+      <div 
+        className="absolute bottom-24 left-1/3 w-[80px] h-[80px] rounded-full bg-accent-500/5 blur-xs pointer-events-none animate-float-medium"
+        style={{ transform: `translate(${mousePos.x * 0.8}px, ${mousePos.y * 0.8}px)` }}
+      />
+      <div 
+        className="absolute top-1/3 right-1/4 w-[50px] h-[50px] rounded-full bg-primary-600/5 pointer-events-none animate-float-fast"
+        style={{ transform: `translate(${mousePos.x}px, ${mousePos.y}px)` }}
+      />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-        <div className="bg-white border border-primary-100/80 rounded-3xl p-6 md:p-10 lg:p-12 shadow-card hover:shadow-card-hover transition-all duration-300 relative overflow-hidden">
-          {/* Top Right Corner Accent Glow */}
-          <div className="absolute top-0 right-0 -mt-16 -mr-16 w-96 h-96 bg-gradient-to-bl from-accent-500/10 via-primary-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
-
+        <div className="bg-white/80 backdrop-blur-md border border-neutral-200/80 rounded-3xl p-6 md:p-10 lg:p-12 shadow-card hover:shadow-card-hover transition-all duration-300 relative overflow-hidden">
+          
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
             {/* Left Column Content */}
             <div className="lg:col-span-7 space-y-6 text-left">
@@ -52,7 +88,7 @@ export function HeroSection() {
                 Cultivate high-performance teams through expert learning, bespoke corporate training programs, and application-driven capabilities.
               </p>
 
-              {/* Key Highlights Grid (Matching Reference Site Highlights) */}
+              {/* Key Highlights Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
                 <div className="flex items-center gap-2.5 p-2 rounded-lg bg-neutral-50/60 border border-neutral-100">
                   <CheckCircle2 className="w-4 h-4 text-success-500 shrink-0" />
@@ -101,7 +137,7 @@ export function HeroSection() {
                 </div>
               </div>
 
-              {/* Enterprise Learner Proof Bar (Contained cleanly inside left column) */}
+              {/* Enterprise Learner Proof Bar */}
               <div className="pt-4 border-t border-neutral-100 flex flex-wrap items-center gap-3">
                 <div className="flex items-center gap-1 text-amber-500">
                   {[...Array(5)].map((_, i) => (
@@ -114,14 +150,49 @@ export function HeroSection() {
               </div>
             </div>
 
-            {/* Right Column Corporate Visual Illustration */}
+            {/* Right Column Corporate Visual & Floating Glass Cards */}
             <div className="lg:col-span-5 relative flex items-center justify-center">
-              <div className="relative w-full max-w-md aspect-square bg-neutral-50/50 rounded-3xl p-4 border border-neutral-200/60 shadow-card hover:shadow-card-hover transition-all duration-300 group flex items-center justify-center">
+              
+              {/* Subtle Blue Glow Behind Hero Illustration */}
+              <div className="absolute inset-0 bg-primary-500/25 blur-[100px] pointer-events-none rounded-full" />
+              
+              <div className="relative w-full max-w-md aspect-square bg-neutral-50/50 rounded-3xl p-4 border border-neutral-200/60 shadow-card hover:shadow-card-hover transition-all duration-300 group flex items-center justify-center z-10">
                 <img
                   src="/assets/images/corporate-team.svg"
                   alt="Accredian Corporate Training Visual"
-                  className="w-full h-auto max-h-[350px] object-contain group-hover:scale-[1.02] transition-transform duration-300"
+                  className="w-full h-auto max-h-[350px] object-contain group-hover:scale-[1.01] transition-transform duration-300"
                 />
+
+                {/* Floating Glass Card 1 */}
+                <div 
+                  className="absolute -top-4 -left-6 bg-white/75 backdrop-blur-md border border-white/40 shadow-card rounded-2xl p-3 flex flex-col gap-1 z-20 animate-float-slow pointer-events-none"
+                  style={{ transform: `translate(${mousePos.x * -0.4}px, ${mousePos.y * -0.4}px)` }}
+                >
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-primary-700">
+                    <BookOpen className="w-3.5 h-3.5 text-primary-500" />
+                    Enterprise Training
+                  </div>
+                  <div className="text-[10px] text-neutral-500">500+ Programs</div>
+                </div>
+
+                {/* Floating Glass Card 2 */}
+                <div 
+                  className="absolute bottom-12 -right-8 bg-white/75 backdrop-blur-md border border-white/40 shadow-card rounded-2xl p-3 flex items-center gap-2 z-20 animate-float-medium pointer-events-none"
+                  style={{ transform: `translate(${mousePos.x * -0.6}px, ${mousePos.y * -0.6}px)` }}
+                >
+                  <TrendingUp className="w-4 h-4 text-emerald-500" />
+                  <span className="text-xs font-bold text-neutral-800">Learning Analytics</span>
+                </div>
+
+                {/* Floating Glass Card 3 */}
+                <div 
+                  className="absolute -bottom-4 -left-8 bg-white/75 backdrop-blur-md border border-white/40 shadow-card rounded-2xl p-3 flex items-center gap-2 z-20 animate-float-fast pointer-events-none"
+                  style={{ transform: `translate(${mousePos.x * -0.8}px, ${mousePos.y * -0.8}px)` }}
+                >
+                  <Award className="w-4 h-4 text-amber-500" />
+                  <span className="text-xs font-bold text-neutral-800">Certification Pathways</span>
+                </div>
+
               </div>
             </div>
           </div>

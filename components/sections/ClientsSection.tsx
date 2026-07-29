@@ -63,14 +63,14 @@ export function ClientsSection() {
           {clients.map((client) => (
             <div
               key={client.id}
-              className="flex items-center justify-center h-16 md:h-20 w-32 md:w-44 px-4 py-3 bg-neutral-50/85 rounded-xl border border-neutral-200/60 hover:border-primary-300 hover:bg-white hover:shadow-xs transition-all cursor-default group"
+              className="flex items-center justify-center h-20 md:h-24 w-36 md:w-48 p-6 bg-white rounded-xl border border-[#EEF2F7] shadow-sm hover:shadow-md hover:scale-[1.08] transition-all duration-300 cursor-default group"
             >
               <img
                 src={client.src}
                 alt={client.alt}
                 width={client.width}
                 height={client.height}
-                className="max-h-8 md:max-h-10 w-auto opacity-70 group-hover:opacity-100 transition-opacity object-contain"
+                className="max-h-8 md:max-h-10 w-auto filter grayscale opacity-75 group-hover:filter-none group-hover:opacity-100 transition-all duration-300 object-contain"
               />
             </div>
           ))}

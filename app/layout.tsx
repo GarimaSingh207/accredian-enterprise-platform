@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ModalProvider } from "@/context/ModalContext";
+import { AdvancedEffects } from "@/components/ui/AdvancedEffects";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -64,7 +65,10 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col font-sans bg-white text-neutral-900">
-        <ModalProvider>{children}</ModalProvider>
+        <ModalProvider>
+          <AdvancedEffects />
+          {children}
+        </ModalProvider>
       </body>
     </html>
   );
