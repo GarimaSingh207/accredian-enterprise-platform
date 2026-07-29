@@ -7,7 +7,7 @@ import { clients } from '@/data/clients';
 export function ClientsSection() {
   return (
     <SectionWrapper id="clients" className="bg-white border-b border-neutral-100 py-12 md:py-16">
-      {/* Trust Rating Bar Header */}
+      {/* Verified Trust Metrics Bar */}
       <div className="max-w-5xl mx-auto mb-10 p-4 md:p-6 bg-neutral-50/80 rounded-2xl border border-neutral-200/60 grid grid-cols-2 md:grid-cols-4 gap-4 text-center divide-x-0 md:divide-x divide-neutral-200/60">
         <div className="flex flex-col items-center justify-center p-2">
           <div className="flex items-center gap-1 text-amber-500 mb-1">
@@ -15,35 +15,35 @@ export function ClientsSection() {
               <Star key={i} className="w-4 h-4 fill-amber-400" />
             ))}
           </div>
-          <span className="text-sm font-bold text-neutral-900">4.9 / 5 Corporate Rating</span>
-          <span className="text-xs text-neutral-500">Based on 500+ Cohorts</span>
+          <span className="text-sm font-bold text-neutral-900">4.9 / 5 Rating</span>
+          <span className="text-xs text-neutral-500">Learner Satisfaction</span>
         </div>
 
         <div className="flex flex-col items-center justify-center p-2">
           <div className="flex items-center gap-1.5 text-primary-600 font-bold mb-1">
             <Building2 className="w-4 h-4 text-primary-600" />
-            <span>200+ Enterprise</span>
+            <span>200+ Corporate</span>
           </div>
-          <span className="text-sm font-bold text-neutral-900">Global Partners</span>
-          <span className="text-xs text-neutral-500">Fortune 500 & Startups</span>
+          <span className="text-sm font-bold text-neutral-900">Clients Trained</span>
+          <span className="text-xs text-neutral-500">Enterprise Partners</span>
         </div>
 
         <div className="flex flex-col items-center justify-center p-2">
           <div className="flex items-center gap-1.5 text-emerald-600 font-bold mb-1">
             <Award className="w-4 h-4 text-emerald-600" />
-            <span>98% Completion</span>
+            <span>98% Program</span>
           </div>
-          <span className="text-sm font-bold text-neutral-900">Retention Rate</span>
-          <span className="text-xs text-neutral-500">Verified Program ROI</span>
+          <span className="text-sm font-bold text-neutral-900">Satisfaction</span>
+          <span className="text-xs text-neutral-500">Verified Impact</span>
         </div>
 
         <div className="flex flex-col items-center justify-center p-2">
           <div className="flex items-center gap-1.5 text-indigo-600 font-bold mb-1">
             <ShieldCheck className="w-4 h-4 text-indigo-600" />
-            <span>ISO Certified</span>
+            <span>10,000+</span>
           </div>
-          <span className="text-sm font-bold text-neutral-900">Accredited Quality</span>
-          <span className="text-xs text-neutral-500">Global L&D Standards</span>
+          <span className="text-sm font-bold text-neutral-900">Upskilled Professionals</span>
+          <span className="text-xs text-neutral-500">Industry Workforce</span>
         </div>
       </div>
 

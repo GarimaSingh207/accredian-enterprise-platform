@@ -9,7 +9,6 @@ import {
   Award,
   Star,
   Lock,
-  Sparkles,
 } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
@@ -21,14 +20,14 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative pt-6 pb-16 md:pt-12 md:pb-24 overflow-hidden bg-gradient-to-b from-white via-primary-50/40 to-white"
+      className="relative pt-6 pb-16 md:pt-12 md:pb-24 overflow-hidden bg-gradient-to-b from-white via-primary-50/30 to-white"
     >
       {/* Background Decorative Mesh & Grids */}
       <div className="absolute inset-0 bg-[radial-gradient(#1565C0_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.03] pointer-events-none" />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-200/25 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-200/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-        <div className="bg-white/90 backdrop-blur-md border border-primary-100/80 rounded-3xl p-6 md:p-10 lg:p-12 shadow-card hover:shadow-card-hover transition-all duration-500 relative overflow-hidden">
+        <div className="bg-white border border-primary-100/80 rounded-3xl p-6 md:p-10 lg:p-12 shadow-card hover:shadow-card-hover transition-all duration-300 relative overflow-hidden">
           {/* Top Right Corner Accent Glow */}
           <div className="absolute top-0 right-0 -mt-16 -mr-16 w-96 h-96 bg-gradient-to-bl from-accent-500/10 via-primary-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
 
@@ -41,10 +40,6 @@ export function HeroSection() {
                   <ShieldCheck className="w-4 h-4 text-primary-600" />
                   Enterprise Learning & Capability Partner
                 </Badge>
-                <div className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200/60 text-xs font-semibold">
-                  <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-500" />
-                  <span>4.9 / 5 Corporate Rating</span>
-                </div>
               </div>
 
               {/* Display Headline */}
@@ -57,42 +52,36 @@ export function HeroSection() {
                 Cultivate high-performance teams through expert learning, bespoke corporate training programs, and application-driven capabilities.
               </p>
 
-              {/* Key Highlights Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                <div className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-neutral-50/80 transition-colors">
-                  <CheckCircle2 className="w-5 h-5 text-success-500 shrink-0" />
-                  <span className="text-sm md:text-base font-semibold text-neutral-800">
+              {/* Key Highlights Grid (Matching Reference Site Highlights) */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                <div className="flex items-center gap-2.5 p-2 rounded-lg bg-neutral-50/60 border border-neutral-100">
+                  <CheckCircle2 className="w-4 h-4 text-success-500 shrink-0" />
+                  <span className="text-xs md:text-sm font-semibold text-neutral-800">
                     Tailored Solutions
                   </span>
                 </div>
-                <div className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-neutral-50/80 transition-colors">
-                  <CheckCircle2 className="w-5 h-5 text-success-500 shrink-0" />
-                  <span className="text-sm md:text-base font-semibold text-neutral-800">
+                <div className="flex items-center gap-2.5 p-2 rounded-lg bg-neutral-50/60 border border-neutral-100">
+                  <CheckCircle2 className="w-4 h-4 text-success-500 shrink-0" />
+                  <span className="text-xs md:text-sm font-semibold text-neutral-800">
                     Industry Insights
                   </span>
                 </div>
-                <div className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-neutral-50/80 transition-colors">
-                  <CheckCircle2 className="w-5 h-5 text-success-500 shrink-0" />
-                  <span className="text-sm md:text-base font-semibold text-neutral-800">
+                <div className="flex items-center gap-2.5 p-2 rounded-lg bg-neutral-50/60 border border-neutral-100">
+                  <CheckCircle2 className="w-4 h-4 text-success-500 shrink-0" />
+                  <span className="text-xs md:text-sm font-semibold text-neutral-800">
                     Expert Guidance
-                  </span>
-                </div>
-                <div className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-neutral-50/80 transition-colors">
-                  <CheckCircle2 className="w-5 h-5 text-success-500 shrink-0" />
-                  <span className="text-sm md:text-base font-semibold text-neutral-800">
-                    Measurable ROI
                   </span>
                 </div>
               </div>
 
               {/* CTA Group with Micro-copy */}
-              <div className="pt-4 space-y-3">
+              <div className="pt-2 space-y-3">
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                   <Button
                     variant="primary"
                     size="lg"
                     onClick={openModal}
-                    className="shadow-md hover:shadow-lg hover:scale-[1.02] transition-all"
+                    className="shadow-md hover:shadow-lg transition-all"
                   >
                     Enquire Now
                     <ChevronRight className="w-4 h-4 ml-1" />
@@ -107,29 +96,20 @@ export function HeroSection() {
 
                 {/* Conversion Trust Micro-copy */}
                 <div className="flex items-center gap-2 text-xs text-neutral-500 pt-1">
-                  <Lock className="w-3.5 h-3.5 text-neutral-400" />
-                  <span>No obligation • Confidential consultation • Responds in 24 hrs</span>
+                  <Lock className="w-3.5 h-3.5 text-neutral-400 shrink-0" />
+                  <span>No obligation • Confidential L&D consultation</span>
                 </div>
               </div>
 
-              {/* Alumni Avatar Social Proof Bar */}
-              <div className="pt-4 border-t border-neutral-100 flex items-center gap-4">
-                <div className="flex -space-x-2 overflow-hidden">
-                  <div className="inline-block h-8 w-8 rounded-full ring-2 ring-white bg-primary-600 text-white text-xs font-bold flex items-center justify-center">
-                    JD
-                  </div>
-                  <div className="inline-block h-8 w-8 rounded-full ring-2 ring-white bg-accent-500 text-white text-xs font-bold flex items-center justify-center">
-                    AK
-                  </div>
-                  <div className="inline-block h-8 w-8 rounded-full ring-2 ring-white bg-emerald-600 text-white text-xs font-bold flex items-center justify-center">
-                    SR
-                  </div>
-                  <div className="inline-block h-8 w-8 rounded-full ring-2 ring-white bg-indigo-600 text-white text-xs font-bold flex items-center justify-center">
-                    +
-                  </div>
+              {/* Enterprise Learner Proof Bar (Contained cleanly inside left column) */}
+              <div className="pt-4 border-t border-neutral-100 flex flex-wrap items-center gap-3">
+                <div className="flex items-center gap-1 text-amber-500">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-amber-400" />
+                  ))}
                 </div>
                 <div className="text-xs text-neutral-600">
-                  Joined by <strong className="text-neutral-900 font-bold">10,000+ professionals</strong> from Fortune 500 companies
+                  <strong className="text-neutral-900 font-bold">10,000+ Enterprise Professionals</strong> upskilled across Fortune 500 & tech leaders
                 </div>
               </div>
             </div>
@@ -138,13 +118,7 @@ export function HeroSection() {
             <div className="lg:col-span-5 relative flex items-center justify-center">
               <div className="relative w-full max-w-md aspect-4/3 sm:aspect-square bg-gradient-to-br from-primary-600 via-primary-700 to-accent-500 rounded-3xl p-7 text-white shadow-xl flex flex-col justify-between overflow-hidden group border border-white/20">
                 {/* Subtle Radial Glow */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.25),transparent)] pointer-events-none" />
-
-                {/* Floating Highlight Pill */}
-                <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-semibold text-white border border-white/30 flex items-center gap-1.5 shadow-xs">
-                  <Sparkles className="w-3 h-3 text-amber-300" />
-                  Cohort 2026 Active
-                </div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.2),transparent)] pointer-events-none" />
 
                 <div className="relative z-10 space-y-4 pt-2">
                   <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 shadow-xs">
@@ -169,7 +143,7 @@ export function HeroSection() {
                   <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15">
                     <div className="flex items-center gap-1.5 text-xs text-white/80 font-medium">
                       <ShieldCheck className="w-3.5 h-3.5 text-emerald-300" />
-                      Retention
+                      Rating
                     </div>
                     <div className="text-2xl font-extrabold text-white mt-1">4.9 / 5</div>
                   </div>
