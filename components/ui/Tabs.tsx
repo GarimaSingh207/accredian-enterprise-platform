@@ -26,7 +26,7 @@ export function Tabs<T extends string = string>({
       role="tablist"
       aria-label="FAQ categories"
       className={cn(
-        'flex flex-wrap items-center justify-center gap-2 p-1.5 bg-slate-100 dark:bg-slate-900 rounded-xl border border-slate-200/80 dark:border-slate-800 max-w-fit mx-auto transition-colors duration-300',
+        'flex flex-wrap items-center justify-center gap-2 p-1.5 bg-slate-100 rounded-xl border border-slate-200/80 max-w-fit mx-auto transition-colors duration-300',
         className
       )}
     >
@@ -41,8 +41,8 @@ export function Tabs<T extends string = string>({
             className={cn(
               'px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600',
               isActive
-                ? 'bg-white dark:bg-slate-800 text-primary-600 dark:text-primary-400 shadow-xs font-semibold'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-200/60 dark:hover:bg-slate-800/60'
+                ? 'bg-white text-primary-600 shadow-xs font-semibold'
+                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'
             )}
           >
             {tab.label}

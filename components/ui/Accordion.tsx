@@ -34,7 +34,7 @@ export function Accordion({ items, allowMultiple = false, className }: Accordion
         return (
           <div
             key={item.id}
-            className="border border-slate-200/90 dark:border-slate-800 rounded-xl bg-white dark:bg-slate-900 transition-all overflow-hidden shadow-xs hover:border-blue-500/40 dark:hover:border-blue-500/40"
+            className="border border-slate-200/90 rounded-xl bg-white transition-all overflow-hidden shadow-xs hover:border-blue-500/40"
           >
             <h3>
               <button
@@ -42,13 +42,13 @@ export function Accordion({ items, allowMultiple = false, className }: Accordion
                 aria-expanded={isOpen}
                 aria-controls={panelId}
                 onClick={() => toggleItem(item.id)}
-                className="w-full flex items-center justify-between gap-4 p-5 md:p-6 text-left font-semibold text-slate-900 dark:text-slate-100 hover:text-primary-600 dark:hover:text-primary-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 cursor-pointer"
+                className="w-full flex items-center justify-between gap-4 p-5 md:p-6 text-left font-semibold text-slate-900 hover:text-primary-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 cursor-pointer"
               >
                 <span>{item.question}</span>
                 <ChevronDown
                   className={cn(
                     'w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300',
-                    isOpen && 'rotate-180 text-primary-600 dark:text-primary-400'
+                    isOpen && 'rotate-180 text-primary-600'
                   )}
                 />
               </button>
@@ -63,7 +63,7 @@ export function Accordion({ items, allowMultiple = false, className }: Accordion
               )}
             >
               <div className="overflow-hidden">
-                <div className="px-5 pb-5 md:px-6 md:pb-6 text-slate-600 dark:text-slate-300 text-sm md:text-base leading-relaxed border-t border-slate-100 dark:border-slate-800 pt-4">
+                <div className="px-5 pb-5 md:px-6 md:pb-6 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-100 pt-4">
                   {item.answer}
                 </div>
               </div>

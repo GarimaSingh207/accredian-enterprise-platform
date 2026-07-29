@@ -32,7 +32,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative pt-6 pb-16 md:pt-12 md:pb-24 overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-300"
+      className="relative pt-6 pb-16 md:pt-12 md:pb-24 overflow-hidden bg-white"
     >
       {/* Subtle Specific Radial Gradients */}
       <div 
@@ -46,7 +46,7 @@ export function HeroSection() {
       />
 
       {/* Dotted Grid Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(#2563EB_1.2px,transparent_1.2px)] [background-size:24px_24px] opacity-5 dark:opacity-10 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(#2563EB_1.2px,transparent_1.2px)] [background-size:24px_24px] opacity-5 pointer-events-none" />
 
       {/* Slow Floating Decorative Circles */}
       <div 
@@ -59,39 +59,39 @@ export function HeroSection() {
       />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-        <div className="bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/90 dark:border-slate-800 rounded-3xl p-6 md:p-10 lg:p-12 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden">
+        <div className="bg-slate-50/80 backdrop-blur-md border border-slate-200/90 rounded-3xl p-6 md:p-10 lg:p-12 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
             {/* Left Column Content */}
             <div className="lg:col-span-7 space-y-6 text-left">
 
               {/* Display Headline */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-slate-50 leading-[1.1]">
-                Next-Gen <span className="text-primary-600 dark:text-primary-400">Expertise</span> <br />
-                For Your <span className="text-blue-700 dark:text-blue-400">Enterprise</span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
+                Next-Gen <span className="text-primary-600">Expertise</span> <br />
+                For Your <span className="text-blue-700">Enterprise</span>
               </h1>
 
-              <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 font-normal leading-relaxed max-w-xl">
+              <p className="text-base sm:text-lg md:text-xl text-slate-600 font-normal leading-relaxed max-w-xl">
                 Cultivate high-performance teams through expert learning, bespoke corporate training programs, and application-driven capabilities.
               </p>
 
               {/* Key Highlights Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200/90 dark:border-slate-700/80 shadow-xs">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                  <span className="text-xs md:text-sm font-semibold text-slate-800 dark:text-slate-200">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-xs">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span className="text-xs md:text-sm font-semibold text-slate-800">
                     Tailored Solutions
                   </span>
                 </div>
-                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200/90 dark:border-slate-700/80 shadow-xs">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                  <span className="text-xs md:text-sm font-semibold text-slate-800 dark:text-slate-200">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-xs">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span className="text-xs md:text-sm font-semibold text-slate-800">
                     Industry Insights
                   </span>
                 </div>
-                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200/90 dark:border-slate-700/80 shadow-xs">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                  <span className="text-xs md:text-sm font-semibold text-slate-800 dark:text-slate-200">
+                <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-slate-200/90 shadow-xs">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span className="text-xs md:text-sm font-semibold text-slate-800">
                     Expert Guidance
                   </span>
                 </div>

@@ -4,8 +4,6 @@ import "./globals.css";
 import { ModalProvider } from "@/context/ModalContext";
 import { AdvancedEffects } from "@/components/ui/AdvancedEffects";
 
-import { ThemeProvider } from "@/components/ui/ThemeProvider";
-
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -59,23 +57,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col font-sans bg-white dark:bg-[#0B1220] text-neutral-900 dark:text-[#F8FAFC] transition-colors duration-300">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange={false}>
-          <ModalProvider>
-            <AdvancedEffects />
-            {children}
-          </ModalProvider>
-        </ThemeProvider>
+      <body className="min-h-full flex flex-col font-sans bg-white text-slate-900">
+        <ModalProvider>
+          <AdvancedEffects />
+          {children}
+        </ModalProvider>
       </body>
     </html>
   );
 }
-
-

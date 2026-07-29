@@ -13,13 +13,13 @@ const iconMap: Record<string, LucideIcon> = {
 
 export function TargetAudienceSection() {
   return (
-    <SectionWrapper id="target-audience" className="bg-white dark:bg-slate-950 border-b border-slate-200/80 dark:border-slate-800 transition-colors duration-300">
+    <SectionWrapper id="target-audience" className="bg-white border-b border-slate-200/80 transition-colors duration-300">
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-50">
-          Who Should Join <span className="text-primary-600 dark:text-primary-400">Our Programs?</span>
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+          Who Should Join <span className="text-primary-600">Our Programs?</span>
         </h2>
-        <p className="text-base md:text-lg text-primary-600 dark:text-primary-400 font-medium">
+        <p className="text-base md:text-lg text-primary-600 font-medium">
           Architected for Organizations Ready to Scale Talent Capabilities
         </p>
       </div>
@@ -33,11 +33,11 @@ export function TargetAudienceSection() {
               key={item.id}
               className="flex flex-col space-y-4 p-6"
             >
-              <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-slate-800 text-primary-600 dark:text-primary-400 flex items-center justify-center shrink-0">
+              <div className="w-12 h-12 rounded-xl bg-blue-50 text-primary-600 flex items-center justify-center shrink-0">
                 <IconComponent className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">{item.title}</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
                 {item.description}
               </p>
             </Card>
