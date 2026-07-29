@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1565C0" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#2196F3" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Glow Ring -->
+  <circle cx="200" cy="200" r="180" fill="none" stroke="url(#glow)" stroke-width="2" stroke-dasharray="8 8" opacity="0.4" />
+  <circle cx="200" cy="200" r="150" fill="none" stroke="url(#accentGlow)" stroke-width="1" stroke-dasharray="4 4" opacity="0.6" />
+
+  <!-- Background Decorative Shapes -->
+  <path d="M 120 120 L 280 120 L 200 280 Z" fill="url(#glow)" opacity="0.05" />
+  
+  <!-- Corporate Dashboard Mockup Frame -->
+  <rect x="70" y="80" width="260" height="180" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="3" shadow="0 20px 25px -5px rgba(0,0,0,0.1)" />
+  <rect x="70" y="80" width="260" height="30" rx="12" fill="#f8fafc" />
+  <!-- Browser dots -->
+  <circle cx="85" cy="95" r="4" fill="#ef4444" />
+  <circle cx="95" cy="95" r="4" fill="#eab308" />
+  <circle cx="105" cy="95" r="4" fill="#22c55e" />
+
+  <!-- Dashboard internal cards -->
+  <rect x="85" y="125" width="70" height="50" rx="6" fill="#eff6ff" />
+  <rect x="165" y="125" width="150" height="50" rx="6" fill="#f1f5f9" />
+  
+  <!-- Charts & Stats lines inside mock -->
+  <path d="M 90 160 L 110 140 L 130 150 L 150 135" fill="none" stroke="#1565C0" stroke-width="3" stroke-linecap="round" />
+  <rect x="175" y="135" width="100" height="8" rx="4" fill="#cbd5e1" />
+  <rect x="175" y="150" width="60" height="8" rx="4" fill="#cbd5e1" />
+
+  <!-- Team Upskilling visual element overlay -->
+  <g transform="translate(180, 210)">
+    <rect x="-100" y="0" width="240" height="110" rx="16" fill="#ffffff" stroke="#1565C0" stroke-width="2" />
+    <!-- Avatars in visual -->
+    <circle cx="-60" cy="55" r="22" fill="#2196F3" />
+    <circle cx="-10" cy="55" r="22" fill="#10B981" />
+    <circle cx="40" cy="55" r="22" fill="#f59e0b" />
+    <circle cx="90" cy="55" r="22" fill="#8b5cf6" />
+    
+    <text x="-68" y="60" fill="#ffffff" font-family="Arial" font-weight="bold" font-size="14">PM</text>
+    <text x="-20" y="60" fill="#ffffff" font-family="Arial" font-weight="bold" font-size="14">AI</text>
+    <text x="30" y="60" fill="#ffffff" font-family="Arial" font-weight="bold" font-size="14">DA</text>
+    <text x="78" y="60" fill="#ffffff" font-family="Arial" font-weight="bold" font-size="14">OPS</text>
+  </g>
+
+  <!-- Floating Professional Badge overlay -->
+  <g transform="translate(40, 280)" filter="drop-shadow(0px 8px 16px rgba(21,101,192,0.15))">
+    <rect x="0" y="0" width="130" height="50" rx="25" fill="#1565C0" />
+    <text x="65" y="30" fill="#ffffff" font-family="Arial" font-weight="bold" font-size="12" text-anchor="middle">Accredited</text>
+  </g>
+</svg>

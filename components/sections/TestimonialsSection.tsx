@@ -26,9 +26,11 @@ export function TestimonialsSection() {
           >
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-2xl font-black text-primary-600 tracking-tight">
-                  {item.companyName}
-                </span>
+                <img
+                  src={item.logoSrc}
+                  alt={item.logoAlt}
+                  className="h-8 w-auto object-contain opacity-85"
+                />
                 <Quote className="w-8 h-8 text-primary-100" />
               </div>
               <p className="text-neutral-700 text-sm md:text-base leading-relaxed italic">

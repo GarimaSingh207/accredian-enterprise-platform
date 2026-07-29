@@ -63,11 +63,15 @@ export function ClientsSection() {
           {clients.map((client) => (
             <div
               key={client.id}
-              className="flex items-center justify-center h-16 md:h-20 px-8 py-3 bg-neutral-50/80 rounded-xl border border-neutral-200/60 hover:border-primary-300 hover:bg-white hover:shadow-xs transition-all cursor-default group"
+              className="flex items-center justify-center h-16 md:h-20 w-32 md:w-44 px-4 py-3 bg-neutral-50/85 rounded-xl border border-neutral-200/60 hover:border-primary-300 hover:bg-white hover:shadow-xs transition-all cursor-default group"
             >
-              <span className="text-lg md:text-2xl font-black tracking-tight text-neutral-600 group-hover:text-primary-600 transition-colors">
-                {client.name}
-              </span>
+              <img
+                src={client.src}
+                alt={client.alt}
+                width={client.width}
+                height={client.height}
+                className="max-h-8 md:max-h-10 w-auto opacity-70 group-hover:opacity-100 transition-opacity object-contain"
+              />
             </div>
           ))}
         </Marquee>

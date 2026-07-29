@@ -114,40 +114,14 @@ export function HeroSection() {
               </div>
             </div>
 
-            {/* Right Column Interactive Showcase Card */}
+            {/* Right Column Corporate Visual Illustration */}
             <div className="lg:col-span-5 relative flex items-center justify-center">
-              <div className="relative w-full max-w-md aspect-4/3 sm:aspect-square bg-gradient-to-br from-primary-600 via-primary-700 to-accent-500 rounded-3xl p-7 text-white shadow-xl flex flex-col justify-between overflow-hidden group border border-white/20">
-                {/* Subtle Radial Glow */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.2),transparent)] pointer-events-none" />
-
-                <div className="relative z-10 space-y-4 pt-2">
-                  <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 shadow-xs">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white leading-snug tracking-tight">
-                    Transforming Workforce Capabilities
-                  </h3>
-                  <p className="text-sm text-white/90 leading-relaxed font-normal">
-                    Bespoke learning tracks engineered for enterprise executives, product leaders, and engineering teams.
-                  </p>
-                </div>
-
-                <div className="relative z-10 pt-6 grid grid-cols-2 gap-3 border-t border-white/20">
-                  <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15">
-                    <div className="flex items-center gap-1.5 text-xs text-white/80 font-medium">
-                      <Award className="w-3.5 h-3.5 text-amber-300" />
-                      Satisfaction
-                    </div>
-                    <div className="text-2xl font-extrabold text-white mt-1">98%</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/15">
-                    <div className="flex items-center gap-1.5 text-xs text-white/80 font-medium">
-                      <ShieldCheck className="w-3.5 h-3.5 text-emerald-300" />
-                      Rating
-                    </div>
-                    <div className="text-2xl font-extrabold text-white mt-1">4.9 / 5</div>
-                  </div>
-                </div>
+              <div className="relative w-full max-w-md aspect-square bg-neutral-50/50 rounded-3xl p-4 border border-neutral-200/60 shadow-card hover:shadow-card-hover transition-all duration-300 group flex items-center justify-center">
+                <img
+                  src="/assets/images/corporate-team.svg"
+                  alt="Accredian Corporate Training Visual"
+                  className="w-full h-auto max-h-[350px] object-contain group-hover:scale-[1.02] transition-transform duration-300"
+                />
               </div>
             </div>
           </div>
