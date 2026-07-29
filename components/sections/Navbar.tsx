@@ -7,6 +7,7 @@ import { useActiveSection } from '@/hooks/useActiveSection';
 import { useScrollLock } from '@/hooks/useScrollLock';
 import { useModal } from '@/context/ModalContext';
 import { Button } from '@/components/ui/Button';
+import { DarkModeToggle } from '@/components/ui/DarkModeToggle';
 import { cn } from '@/lib/cn';
 
 export function Navbar() {
@@ -20,7 +21,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 80);
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -41,27 +42,25 @@ export function Navbar() {
     <>
       <header
         className={cn(
-          'sticky top-0 z-40 w-full transition-all duration-300 bg-white/75 backdrop-blur-[16px] border-b border-white/25',
+          'sticky top-0 z-40 w-full transition-all duration-300',
           isScrolled
-            ? 'shadow-[0_4px_20px_rgba(0,0,0,0.08)] py-2.5'
-            : 'shadow-none py-4'
+            ? 'bg-white/80 dark:bg-[#0B1220]/80 backdrop-blur-md shadow-sm border-b border-neutral-200/50 dark:border-[rgba(255,255,255,0.08)] py-3'
+            : 'bg-white dark:bg-[#0B1220] py-4'
         )}
       >
         <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between">
-          {/* Logo */}
+          {/* Brand Logo */}
           <a
             href="#home"
             onClick={(e) => handleNavClick(e, '#home')}
-            className="flex items-center gap-2 group cursor-pointer"
+            className="flex flex-col group cursor-pointer"
           >
-            <div className="flex flex-col">
-              <span className="text-2xl font-black tracking-tight text-primary-600">
-                accredian
-              </span>
-              <span className="text-[10px] font-medium tracking-widest text-neutral-500 uppercase -mt-1">
-                credentials that matter
-              </span>
-            </div>
+            <span className="text-2xl font-black tracking-tight text-primary-600">
+              accredian
+            </span>
+            <span className="text-[10px] font-medium tracking-widest text-neutral-500 uppercase -mt-1">
+              credentials that matter
+            </span>
           </a>
 
           {/* Desktop Nav Links */}
@@ -93,20 +92,24 @@ export function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
+            <DarkModeToggle />
             <Button variant="primary" size="md" onClick={openModal}>
               Enquire Now
             </Button>
           </div>
 
-          {/* Mobile Hamburger Button */}
-          <button
-            onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-            aria-label="Toggle navigation menu"
-            aria-expanded={isDrawerOpen}
-            className="lg:hidden p-2 text-neutral-700 hover:text-neutral-900 rounded-lg hover:bg-neutral-100 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600"
-          >
-            {isDrawerOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile Controls */}
+          <div className="flex lg:hidden items-center gap-2">
+            <DarkModeToggle />
+            <button
+              onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+              aria-label="Toggle navigation menu"
+              aria-expanded={isDrawerOpen}
+              className="p-2 text-neutral-700 hover:text-neutral-900 rounded-lg hover:bg-neutral-100 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600"
+            >
+              {isDrawerOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </header>
 

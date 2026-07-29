@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import {
   CheckCircle2,
   ChevronRight,
-  ShieldCheck,
   Star,
   Lock,
   Award,
@@ -12,7 +11,6 @@ import {
   BookOpen,
 } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
-import { Badge } from '@/components/ui/Badge';
 import { useModal } from '@/context/ModalContext';
 
 export function HeroSection() {
@@ -70,13 +68,6 @@ export function HeroSection() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
             {/* Left Column Content */}
             <div className="lg:col-span-7 space-y-6 text-left">
-              {/* Badge Bar */}
-              <div className="flex flex-wrap items-center gap-2.5">
-                <Badge variant="primary" className="gap-1.5 px-3.5 py-1.5 text-xs font-semibold shadow-xs border-indigo-200 text-indigo-700 bg-indigo-50/50">
-                  <ShieldCheck className="w-4 h-4 text-indigo-600" />
-                  Enterprise Learning & Capability Partner
-                </Badge>
-              </div>
 
               {/* Display Headline with gradient text highlights */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-900 leading-[1.1]">
