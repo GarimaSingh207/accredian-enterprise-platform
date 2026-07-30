@@ -1,6 +1,6 @@
-# Accredian Enterprise Landing Page
+# Accredian Enterprise Landing Page Recreation
 
-A full-stack implementation of the [Accredian Enterprise Landing Page](https://enterprise.accredian.com/) built with **Next.js 16 (App Router)**, **TypeScript**, and **Tailwind CSS v4**.
+A responsive recreation of the [Accredian Enterprise Landing Page](https://enterprise.accredian.com/) built using **Next.js 16 (App Router)**, **TypeScript**, and **Tailwind CSS v4**, featuring an API Route Handler for lead capture.
 
 ---
 
