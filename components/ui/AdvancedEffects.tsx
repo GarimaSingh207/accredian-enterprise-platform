@@ -9,15 +9,22 @@ export function AdvancedEffects() {
   const { openModal } = useModal();
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
-      if (totalScroll > 0) {
-        const progress = (window.scrollY / totalScroll) * 100;
-        setScrollProgress(progress);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+          if (totalScroll > 0) {
+            const progress = (window.scrollY / totalScroll) * 100;
+            setScrollProgress(progress);
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

@@ -18,14 +18,21 @@ export function HeroSection() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
+    let ticking = false;
     const handleMouseMove = (e: MouseEvent) => {
-      const { clientX, clientY } = e;
-      const x = (clientX / window.innerWidth - 0.5) * 12; // Maximum 12px translation
-      const y = (clientY / window.innerHeight - 0.5) * 12;
-      setMousePos({ x, y });
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const { clientX, clientY } = e;
+          const x = (clientX / window.innerWidth - 0.5) * 12;
+          const y = (clientY / window.innerHeight - 0.5) * 12;
+          setMousePos({ x, y });
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
@@ -147,6 +154,7 @@ export function HeroSection() {
                 <img
                   src="/assets/images/corporate-team.svg"
                   alt="Accredian Corporate Training Visual"
+                  decoding="async"
                   className="w-full h-auto max-h-[350px] object-contain group-hover:scale-[1.01] transition-transform duration-300"
                 />
 

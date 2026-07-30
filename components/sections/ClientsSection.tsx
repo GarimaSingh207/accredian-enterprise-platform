@@ -70,6 +70,8 @@ export function ClientsSection() {
                 alt={client.alt}
                 width={client.width}
                 height={client.height}
+                loading="lazy"
+                decoding="async"
                 className="max-h-8 md:max-h-10 w-auto filter grayscale opacity-75 group-hover:filter-none group-hover:opacity-100 transition-all duration-300 object-contain"
               />
             </div>
